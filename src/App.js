@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import IconBars from './components/IconBars.jsx';
+import Insights from './components/Insights.jsx';
+import SummaryHeader from './components/SummaryHeader.jsx'
+import TableInfo from './components/TableInfo.jsx';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SummaryHeader />
+      <Insights />
+      <IconBars />
+      <TableInfo />
     </div>
   );
 }
