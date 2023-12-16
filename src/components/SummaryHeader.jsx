@@ -2,7 +2,7 @@ import { IoSearch } from "react-icons/io5";
 
 const SummaryHeader = () => {
     return(
-        <div >
+        <div className="min-w-full">
           <button className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-3 m-2 rounded-md">HaiX.AI</button>
             <h1 className="text-xl text-black text-center font-bold py-3">Stay ahead with Real-Time Insights</h1>
             <div className="flex justify-center py-2 my-2">

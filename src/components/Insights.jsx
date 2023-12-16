@@ -7,7 +7,7 @@ import { instaData } from '../Data/instaData';
 const Insights = () => {
     let sentimentScore = instaData.stats.instagram.timelineStats.timeline[0].meanSentiment;
   return (
-    <div>
+    <div className='min-w-full'>
          <h1 className='text-center text-lg font-semibold'>Quick Insights</h1>
         <div className='flex justify-center items-center flex-row'>
             <div className='icon-insights-container flex justify-center items-center flex-row'>

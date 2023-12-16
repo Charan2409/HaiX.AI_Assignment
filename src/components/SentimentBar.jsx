@@ -19,7 +19,7 @@ const SentimentBar = () => {
   console.log(score * 100)
 
   return (
-    <div>
+    <div className='min-w-full'>
       <span className='font-bold'>Sentiment </span>
       <ProgressBar now={score * 100} label={`${score.toFixed(2) * 100}%` } variant={getColor()} max={100}/>
     </div>

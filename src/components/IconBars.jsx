@@ -10,7 +10,7 @@ const IconBars = () => {
   });
 
   return (
-    <div className='justify flex items-center justify-center my-5 animate-[wiggle_1s_ease-in-out_infinite]'>
+    <div className='justify flex items-center justify-center w-full my-5 animate-[wiggle_1s_ease-in-out_infinite]'>
         <animated.div style={fadeIn} className="flex items-center  space-x-4 p-4 bg-gray-800 w-full justify-center shadow-md border-radius text-white">
             <FaTwitter className="text-2xl hover:text-blue-400 animate-bounce hover:scale-105 hover:rotate-[360deg] mx-3 transition duration-300" />
             <FaInstagram className="text-2xl hover:text-purple-500 animate-bounce hover:scale-105 hover:rotate-[360deg] mx-3 transition duration-300" />
