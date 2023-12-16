@@ -7,7 +7,7 @@ import TableInfo from './components/TableInfo.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col">
       <SummaryHeader />
       <Insights />
       <IconBars />
