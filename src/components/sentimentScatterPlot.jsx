@@ -10,7 +10,7 @@ const SentimentScatterPlot = ({ data, source }) => {
         {
           x: sentimentScores,
           type: 'scatter',
-          mode: 'lines+markers',
+          mode: 'markers',
           marker: { color: 'blue' },
         },
       ]}
