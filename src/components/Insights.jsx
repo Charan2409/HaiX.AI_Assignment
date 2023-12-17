@@ -1,13 +1,19 @@
 import React from 'react'
 import { FaTwitter, FaInstagram, FaYoutube, FaFacebook } from 'react-icons/fa';
 import SentimentBar from './SentimentBar';
-import { instaData } from '../Data/instaData';
+import  instaData  from '../Data/instaData';
+import twitterData from '../Data/twitterData';
 
 
 const Insights = () => {
-    let sentimentScore = instaData.stats.instagram.timelineStats.timeline[0].meanSentiment;
+    let instaSentimentScore = instaData.stats.instagram.timelineStats.timeline[0].meanSentiment;
+    let twitterSentimentScore = twitterData.stats.twitter.timelineStats.timeline[0].meanSentimentExternal;
   return (
     <div className='min-w-full'>
+         <button className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-3 m-2 rounded-md">
+        HaiX.AI
+      </button>
+         <h1 className="text-xl text-black text-center font-bold py-3">Stay ahead with Real-Time Insights</h1>
          <h1 className='text-center text-lg font-semibold'>Quick Insights</h1>
         <div className='flex justify-center items-center flex-row'>
             <div className='icon-insights-container flex justify-center items-center flex-row'>
@@ -29,7 +35,8 @@ const Insights = () => {
                 </div>
             </div>
             <div>
-                <SentimentBar now={sentimentScore}/>
+            <SentimentBar sentimentScore={instaSentimentScore} label='Instagram Sentiment' />
+            <SentimentBar sentimentScore={twitterSentimentScore} label='Twitter Sentiment' />
             </div>
         </div>
     </div>

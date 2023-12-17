@@ -1,11 +1,8 @@
 import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { instaData } from '../Data/instaData';
 
-const SentimentBar = () => {
-  let sentimentScore = instaData.stats.instagram.timelineStats.timeline[0].meanSentiment;
-
+const SentimentBar = ({ sentimentScore, label }) => {
   const getColor = () => {
     if (sentimentScore < -0.33) {
       return 'danger'; // Red
@@ -15,13 +12,13 @@ const SentimentBar = () => {
       return 'success'; // Green
     }
   };
-  const score =  Math.abs(sentimentScore)
-  console.log(score * 100)
+
+  const score = Math.abs(sentimentScore);
 
   return (
     <div className='min-w-full'>
-      <span className='font-bold'>Sentiment </span>
-      <ProgressBar now={score * 100} label={`${score.toFixed(2) * 100}%` } variant={getColor()} max={100}/>
+      <span className='font-bold'>{label}</span>
+      <ProgressBar now={score * 100} label={`${(score * 100).toFixed(2)}%`} variant={getColor()} max={100} />
     </div>
   );
 };

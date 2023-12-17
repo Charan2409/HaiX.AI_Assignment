@@ -1,5 +1,4 @@
-export const instaData = 
-  {
+const instaData = {
     "Profile Info": {
       "User Info": {
         "_id": "614ed222b0c59d7ef3d18802",
@@ -348,3 +347,5 @@ export const instaData =
       }
     }
   }
+
+  export default instaData

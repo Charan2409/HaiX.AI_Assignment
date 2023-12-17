@@ -1,15 +1,17 @@
 import React from 'react'
-import { twitterData } from '../Data/twitterData'
-import { instaData } from '../Data/instaData'
+import  twitterData  from '../Data/twitterData'
+import  instaData  from '../Data/instaData'
 
 const TableInfo = () => {
     let instaSentiment = instaData['stats'].instagram.timelineStats.timeline[0].meanSentiment;
+    let twitterSentiment = twitterData['stats'].twitter.timelineStats.timeline[0].meanSentiment;
   return (
     <div>
         <h3>Sentiment score</h3>
         <table  className="min-w-full bg-white border border-gray-300 shadow-md"
             border="1px solid"
             cellPadding="10px">
+                <tbody>
             <tr>
                 <th className='py-2 px-4 text-left font-bold'>S.No</th>
                 <th className='py-2 px-4 text-left font-bold'>UserName</th>
@@ -31,15 +33,16 @@ const TableInfo = () => {
                 
             </tr>
             <tr>
-                <td className='py-2 px-4 text-left font-normal'>{twitterData.stats.instagram.timelineStats.timeline[0].date}</td>
+                <td className='py-2 px-4 text-left font-normal'>{twitterData.stats.twitter.timelineStats.timeline[0].date}</td>
                 <td className='py-2 px-4 text-left font-normal'>{twitterData['Profile Info']['User Info'].user}</td>
                 <td className='py-2 px-4 text-left font-normal'>0</td>
                 <td className='py-2 px-4 text-left font-normal'>No</td>
-                <td className='py-2 px-4 text-left font-normal'>NEGATIVE</td>
+                <td className='py-2 px-4 text-left font-normal'>{twitterSentiment.toFixed(2) ===0 ? "NEUTRAL" : instaSentiment.toFixed(2) < -0.33 ? "NEGATIVE" : "POSITIVE" }</td>
                 <td className='py-2 px-4 text-left font-normal'>Data not found in JSON</td>
                 <td className='py-2 px-4 text-left font-normal'>Data not found in JSON</td>
                 
             </tr>
+            </tbody>
         </table>
     </div>
   )

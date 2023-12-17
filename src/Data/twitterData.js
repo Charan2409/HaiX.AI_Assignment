@@ -1,4 +1,4 @@
- export const twitterData = {
+const twitterData = {
   "Profile Info": {
     "User Info": {
       "_id": "614ed222b0c59d7ef3d18802",
@@ -326,19 +326,22 @@
     }
   },
   "stats": {
-    "instagram": {
+    "twitter": {
       "timelineStats": {
         "timeline": [
           {
-            "total": 280,
-            "currentTimeStamp": "2023-11-26T10:37:53Z",
+            "total": 729,
+            "currentTimeStamp": "2023-11-26T10:32:26Z",
             "sentimentAsCategories": {
-              "positiveComments": 162,
-              "neutralComments": 105,
-              "negativeComments": 13
+              "positiveTweets": 185,
+              "neutralTweets": 432,
+              "negativeTweets": 112,
+              "positiveExternalTweets": 185,
+              "neutralExternalTweets": 432,
+              "negativeExternalTweets": 112
             },
-            "meanSentiment": 0.6027790246771809,
-            "meanSubjectivity": 0.4520667140399283,
+            "meanSentiment": 0.24361157674677006,
+            "meanSentimentExternal": 0.24361157674677006,
             "date": "2023-11-07",
             "startDate": "2023-11-07"
           }
@@ -346,4 +349,6 @@
       }
     }
   }
- }
+}
+
+export default twitterData;
