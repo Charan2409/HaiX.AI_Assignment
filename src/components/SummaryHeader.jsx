@@ -11,6 +11,7 @@ const SummaryHeader = () => {
   // const twitterCompanies = twitterData['Profile Info']['User Info'].companies;
 
   const handleSearch = (e) => {
+    setSearchText(e.target.value)
     instaCompanies.filter((comp) => (comp.name).includes(e.target.value) ? setSelectedData({ data: instaData, source: 'instagram' }) : setSelectedData({ data: twitterData, source: "twitter"}))
     ;
     console.log(selectedData)
