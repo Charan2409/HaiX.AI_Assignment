@@ -16,7 +16,7 @@ const twitterData = {
           "id": "ac09543c-17f0-441d-9473-cef7aa065f95",
           "lang": "en",
           "createTime": "2023-01-31 13:42:02.219000",
-          "name": "ithra",
+          "name": "max",
           "newsHandler": "ithra",
           "facebookHandler": "476937209020400",
           "facebookScreenName": "ithra",
